@@ -9,6 +9,7 @@ public class Main {
         Professor p1 = new Professor("Birute",123,"4345");
 
         Course c1 = new Course("Programming In Java",1);
+
         c1.setProfessor(p1);
 
         c1.addStudent(s1);
@@ -16,7 +17,7 @@ public class Main {
         c1.addStudent(s3);
 
         c1.listStudents();
-        
+
         c1.sendInformation("test");
     }
 }
