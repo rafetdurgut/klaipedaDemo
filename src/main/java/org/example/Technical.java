@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
-public class Professor {
+public class Technical {
     @NonNull
     private String name;
     @NonNull

@@ -19,14 +19,18 @@ public class Course {
     @NonNull
     private int ID;
     private List<Student> studentList = new ArrayList<Student>();
+    private Professor professor;
+    private Technical technical;
 
     public void setProfessor(Professor professor) {
         professor.addCourse(this);
         this.professor = professor;
     }
 
-    private Professor professor;
-
+    public void setTechnical(Technical technical) {
+        technical.addCourse(this);
+        this.technical = technical;
+    }
     public void addStudent(Student s)
     {
         studentList.add(s);

@@ -43,10 +43,6 @@ public class Student {
     {
         System.out.println(text + " is sent to "+number);
     }
-    public void databaseConnection()
-    {
-        System.out.println("Connect to db");
-    }
 
     @Override
     public String toString() {

@@ -7,7 +7,9 @@ public class Main {
         Student s3 = new Student("Patrick",322,"34569");
 
         Professor p1 = new Professor("Birute",123,"4345");
-
+        Technical t1 = new Technical("Jonathan",3212,"4345");
+        t1.setSalary(40000);
+        t1.CalculateNetSalary();
         Course c1 = new Course("Programming In Java",1);
         c1.setProfessor(p1);
 
