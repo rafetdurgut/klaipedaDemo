@@ -18,40 +18,33 @@ public class Course {
     private String name;
     @NonNull
     private int ID;
-    private List<Student> studentList = new ArrayList<Student>();
+    private List<Person> personList = new ArrayList<Person>();
 
-    public void setProfessor(Professor professor) {
-        professor.addCourse(this);
-        this.professor = professor;
-    }
 
-    private Professor professor;
 
-    public void addStudent(Student s)
+
+    public void addPerson(Person p)
     {
-        studentList.add(s);
-        s.addCourse(this);
+        personList.add(p);
+        p.addCourse(this);
     }
-    public void removeStudent(Student s)
+    public void removeStudent(Person p)
     {
-        studentList.remove(s);
-        s.removeCourse(this);
+        personList.remove(p);
+        p.removeCourse(this);
     }
     public void listStudents(){
-        for (Student s : studentList ) {
-            System.out.println(s);
+        for (Person p : personList ) {
+            if (p instanceof Student)
+                System.out.println(p);
         }
     }
     public void sendInformation(String message)
     {
-        for (Student s: this.studentList
+        for (Person p: this.personList
              ) {
-            s.sendMessage(message);
+            p.sendMessage(message);
         }
-    }
-    public void databaseConnection()
-    {
-        System.out.println("Connect to db");
     }
     @Override
     public String toString() {
